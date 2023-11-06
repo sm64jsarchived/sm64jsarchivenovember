@@ -10,26 +10,22 @@ This is an ongoing work-in-progress port of the decompilation of original Ninten
 
 ## Build instructions - Windows, Mac, or Linux
 
-### First install Docker
-* Windows - [Install Instructions](https://docs.docker.com/docker-for-windows/install-windows-home/)
-* Mac - [Install Instructions](https://docs.docker.com/docker-for-mac/install/)
-* Linux - [Install Instructions](https://docs.docker.com/engine/install/#server)
+
 
 ### Run these commands
 ```bash
-# Create and start lightweight docker container with NodeJs
-docker run --name mySm64JsServer -dp 80:80 node:13 tail -f /dev/null
-# Connect to the docker container's shell
-docker exec -it mySm64JsServer /bin/sh
+# Node.js For Windows And Linux Virtual Machine For Mac
+npm install
 
-# Install additional prerequisites
-apk update && apk add git
-# Clone the source code
-git clone https://github.com/sm64js/sm64js.git && cd sm64js
+npm run start
 
-# Install node packages, build, and serve
-npm run quickstart
+node serveProduction.js
 ```
+Npm install will give the dependecies needed.
+
+Npm run start will start localhost:9300.
+
+Node serveProduction.js will start MMO
 You should now be able to access the website with the game from a web browser by typing "localhost" into the address bar.
 
 
